@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80');
+    background-size: cover;          /*Ajusta el fondo a la pantalla completa*/
+    background-attachment: fixed;    
+}
+
+header .logo img{
+    width: 12%;
+}
+
+.contenedor{
+    margin: auto;
+    width: 90%;
+    max-width: 1000px; 
+    
+    display: flex;
+    flex-direction: row;  /*row uno al lado del otro*/
+    flex-wrap: wrap;      /* los que no encajan se pongan debajo*/
+}
+
+header{
+    width: 100%;
+    padding: 50px 0;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a{
+    color: rgb(243, 237, 237);
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+header nav a:hover{
+    text-decoration: underline;
+}
+
+.main{
+    background: #fff;
+    padding: 20px;
+    width: 70%;
+}
+
+.main article .thumb{
+    margin-bottom: 20px;
+}
+
+.main article .thumb img{
+    width: 100%;
+    vertical-align: top;          /*poner a todas las imagenes un vertical align top */
+}
+
+.main article h2{
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.main article p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+aside{
+    width: 30%;
+    background: #537dca;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside .ad{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+    background: #4264a2;
+    /*margin: 20px 0;*/
+}
+
+footer{
+    margin: 20px 0;
+    width: 100%;
+    background: rgba(209, 201, 201, 0.5);
+    padding: 20px;
+    color: rgb(255, 248, 248);
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer .redes-sociales a{
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+footer .redes-sociales a:hover{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 900px){
+   
+    header{
+        flex-direction: column;
+        padding-bottom: 20px;
+        padding: 20px 0;
+    }
+
+    header nav{
+        width: 100%;
+        background: rgba(255, 255, 255,.5);
+        text-align: center;
+        padding: 20px;
+    }
+
+    header .logo{
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    
+    header nav a{
+        margin: 0px 20px;
+    }
+
+    nav{
+        width: 100%;
+    }
+    
+
+}
+
+@media screen and (max-width: 600px){
+    
+ 
+    aside{
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    aside .ad{
+        width: 40%;
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .autor{
+        order: 2;
+    }
+
+    footer .redes-sociales{
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    aside{
+        display: none;    /* quitarlo*/
+    }
+}
